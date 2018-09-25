@@ -22,15 +22,15 @@ def fastSumStringLengthOfXinN(N):
         # N > 10!
         # n = int(math.log10(103)) = 2
         trailing_n = int(math.log10(N))
-        # (103 - 100) * (2 + 1) = 9
+        # (103 - 100) = 3
         r = (N - 10 ** (trailing_n))
         # unknown general math name of a number starting with 1 and has only trailing 0
         # We will give this number the name: The Paalion number
+        # (103 - 3) = 100
         paalion = N - r
-        # (103 - 100) = 3
         # unknown general math name of the number in curly bracket, example 9100 - {8100} = 1000
         # We will name this number the rosalion number
-        rosalion = (N - 10 ** (trailing_n)) * (trailing_n + 1)
+        rosalion = r * (trailing_n + 1)
         def lengthOfPaalion(local_paalion):
             if local_paalion <= 10:
                 return 10
